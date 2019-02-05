@@ -3,43 +3,68 @@
   box-sizing: border-box;
 }
 
-.wrap {
-  border: 2px dotted blue;
-  width: 95%;
-  margin: 0 auto;
+body {
+  font-family: 'Source Serif Pro', serif;
+  background: #ccc;
 }
 
-body {
-  font-family: 'Nunito', sans-serif;
-  background: white;
+.wrapper {
+  width: 85%;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
 
 h1 {
-  background: #3d3d5c;
+  background: #000080;
   color: #fff;
   text-align: center;
   margin: 0 0 20px 0;
-  padding: 20px 0;
+  padding: 30px;
+}
+
+.signup {
+  border-bottom: 5px solid black;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.subhead {
+  text-align: center;
+  width: 90%;
+  padding: 0 20px 25px 20px;
+  margin-bottom: 5px;
 }
 
 form {
-  max-width: 400px;
+  width: 75%;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 30px 20px;
+  margin-top: 5px;
   border-top: 2px solid black;
 }
 
 fieldset {
   border: none;
+  padding: 5px;
 }
 
 legend {
-  margin-top: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+label, input {
+  display: block;
 }
 
 label {
-  display: block;
+  margin-bottom: 10px;
+}
+
+label, p, label.options {
+  color: #999;
 }
 
 input[type="text"],
@@ -48,18 +73,82 @@ input[type="tel"],
 textarea,
 select
 {
-  background: rgba(255,255,255,0.1);
+  background: #e6e6e6;
   border: none;
+  border-radius: 3px;
   font-size: 16px;
-  width: 100%
-  background-color: #e8eeef;
-  color: #8a97a0;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 10px;
+
 }
 
-label.options {
+input:focus, select:focus, textarea:focus
+{
+  outline: solid 3px #e65c00;
+}
+
+select {
+  height: 50px;
+}
+
+input[id="zip"]
+{
+  width: 50%;
+}
+
+input::placeholder
+{
+  font-style: italic;
+  text-align: right;
+  color: #ccc;
+}
+
+label.options, input.options {
   display: inline;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.options {
+  color: black;
+  padding-left: 10px;
+}
+
+.border {
+  border-bottom: 2px solid black;
+  margin-bottom: 30px;
+}
+
+label[for="feedback"]
+{
+  margin-top: 10px;
+}
+
+textarea {
+  height: 100px;
+  width: 100%;
+}
+
+input[type="checkbox"], input[type="radio"]
+{
+  outline: none;
+}
+
+button {
+  padding: 20px;
+  color: #fff;
+  background-color: #e65c00;
+  font-size: 20px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
 }
 
 /*
@@ -68,12 +157,38 @@ label.options {
 
 @media (min-width: 768px) {
 
-label {
+.wrapper {
+  width: 65%;
+}
+
+form {
+  max-width: 769px;
+}
+
+label, input {
   display: inline-block;
 }
 
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 25px;
 }
 
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
 
+.row:after {
+  content: "";
+  display: table;
+    clear: both;
+}
+
+textarea, button {
+  width: 95%;
+}
 
 }
